@@ -90,3 +90,13 @@ function singleNav() {
     document.getElementById("guesscoin").className = "inactive";
 }
 
+function multiNav() {
+    document.getElementById("homenav").className = "";
+    document.getElementById("home").className = "inactive";
+    document.getElementById("singlenav").className = "";
+    document.getElementById("single").className = "inactive";
+    document.getElementById("multinav").className = "active";
+    document.getElementById("multi").className = "active";
+    document.getElementById("guessnav").className = "";
+    document.getElementById("guesscoin").className = "inactive";
+}
