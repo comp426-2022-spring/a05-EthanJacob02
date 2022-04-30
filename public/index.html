@@ -56,7 +56,18 @@
       <p id="tails"></p>
     </div>
     <div id="guess" class="hidden">
-      
+      <h1>Guess a coin flip:</h1>
+      <form id="call">
+        <select name="guess" id="guess" form="call">
+          <option value="heads">Heads</option>
+          <option value="tails">Tails</option>
+        </select>
+        <input type="submit" value="Flip!">
+      </form>
+      <h2>Results:</h2>
+      <p><span id="choice"><span></p>
+      <p><span id="actual"><span></p>
+      <p><span id="results"><span></p>
     </div>
 	<script src="main.js"></script>
   </body>
