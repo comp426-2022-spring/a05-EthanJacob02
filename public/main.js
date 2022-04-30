@@ -1,8 +1,21 @@
-// Focus div based on nav button click
+const coin = document.getElementById("coin")
 
-// Flip one coin and show coin image to match result when button clicked
+coin.addEventListener("click", flipCoin)
 
-// Flip multiple coins and show coin images in table as well as summary results
-// Enter number and press button to activate coin flip series
+async function flipCoin() {
 
-// Guess a flip by clicking either heads or tails button
+    const endpoint = "app/flip/"
+
+    const url = document.baseURI+endpoint
+
+    await fetch(url)
+
+  		    .then(function(response) {
+    		    return response.json();
+  		      })
+			    .then(function(result) {
+				    console.log(result);
+				    document.getElementById("result").innerHTML = result.flip;
+				    document.getElementById("quarter").setAttribute("src", "assets/img/"+result.flip+".png");
+				  });
+  };
