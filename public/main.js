@@ -1,4 +1,4 @@
-const coin = document.getElementById("flipOne")
+const coin = document.getElementById("singleFlip")
 coin.addEventListener("click", flipCoin)
 async function flipCoin() {
     const endpoint = "app/flip/"
@@ -10,4 +10,25 @@ async function flipCoin() {
 				    document.getElementById("result").innerHTML = result.flip;
 				    document.getElementById("quarter").setAttribute("src", "assets/img/"+result.flip+".png");
 				  });
-  };
+};
+
+const coins = document.getElementById("coins")
+coins.addEventListener("submit", flipCoins)
+async function flipCoins(event) {
+    event.preventDefault();
+    const endpoint = "app/flip/coins/"
+	const url = document.baseURI+endpoint
+    const formEvent = event.currentTarget
+    try {
+		const formData = new FormData(formEvent);
+		const flips = await sendFlips({ url, formData });
+		console.log(flips);
+		document.getElementById("heads").innerHTML = "Heads: "+flips.summary.heads;
+		document.getElementById("tails").innerHTML = "Tails: "+flips.summary.tails;
+    } catch (error) {
+		console.log(error);
+	}
+}
+
+const call = document.getElementById("call")
+call.addEventListener("submit", flipCall)
