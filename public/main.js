@@ -49,3 +49,20 @@ async function flipCall(event) {
             console.log(error);
         }
 }
+
+async function sendFlips({ url, formData }) {
+    const plainFormData = Object.fromEntries(formData.entries());
+    const formDataJson = JSON.stringify(plainFormData);
+
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: formDataJson
+    };
+
+    const response = await fetch(url, options);
+    return response.json()
+}
