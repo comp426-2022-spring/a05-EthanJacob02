@@ -78,3 +78,15 @@ function homeNav() {
     document.getElementById("guessnav").className = "";
     document.getElementById("guesscoin").className = "inactive";
 }
+
+function singleNav() {
+    document.getElementById("homenav").className = "";
+    document.getElementById("home").className = "inactive";
+    document.getElementById("singlenav").className = "active";
+    document.getElementById("single").className = "active";
+    document.getElementById("multinav").className = "";
+    document.getElementById("multi").className = "inactive";
+    document.getElementById("guessnav").className = "";
+    document.getElementById("guesscoin").className = "inactive";
+}
+
