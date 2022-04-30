@@ -66,3 +66,15 @@ async function sendFlips({ url, formData }) {
     const response = await fetch(url, options);
     return response.json()
 }
+
+// Navigation Buttons
+function homeNav() {
+    document.getElementById("homenav").className = "active";
+    document.getElementById("home").className = "active";
+    document.getElementById("singlenav").className = "";
+    document.getElementById("single").className = "inactive";
+    document.getElementById("multinav").className = "";
+    document.getElementById("multi").className = "inactive";
+    document.getElementById("guessnav").className = "";
+    document.getElementById("guesscoin").className = "inactive";
+}
