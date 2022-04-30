@@ -32,3 +32,20 @@ async function flipCoins(event) {
 
 const call = document.getElementById("call")
 call.addEventListener("submit", flipCall)
+
+async function flipCall(event) {
+    event.preventDefault();
+    const endpoint = "app/flip/call/"
+    const url = document.baseURI+endpoint
+    const formEvent = event.currentTarget
+    try {
+        const formData = new FormData(formEvent); 
+        const results = await sendFlips({ url, formData });
+        console.log(results);
+        document.getElementById("choice").innerHTML = "Guess: "+results.call;
+        document.getElementById("actual").innerHTML = "Actual: "+results.flip;
+        document.getElementById("results").innerHTML = "Result: "+results.result;
+        } catch (error) {
+            console.log(error);
+        }
+}
