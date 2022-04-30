@@ -33,13 +33,27 @@
       <button id="guessnav">Guess the result</button>
     </nav>
     <div id="home">
-      
+      <h1>Coin Flipping Games!</h1>
+      <p>Click the buttons above to flip a coin, flip many coins, or guess a coin flip. 
     </div>    
     <div id="single" class="hidden">
-      
+      <h1>Flip a single coin.</h1>
+      <button id="singleFlip">Go!</button>
+      <h2>Result:</h2>
+      <img src="assets/img/coin.png" id="quarter" class="bigcoin">   
     </div>
     <div id="multi" class="hidden">
-      
+      <h1>Flip multiple coins!</h1>
+      <form id="coins">
+        <label for="number">
+          <strong>How many?</strong>
+        </label>
+        <input type="number" name="number" id="number">
+        <input type="submit" value="Flip!">
+      </form>
+      <h2>Results:</h2>
+      <p id="heads"></p>
+      <p id="tails"></p>
     </div>
     <div id="guess" class="hidden">
       
