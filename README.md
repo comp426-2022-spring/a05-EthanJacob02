@@ -108,23 +108,7 @@ Keep-Alive: timeout=5
 
 ### /app/flips/:number/ (GET)
 
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
+- Replaced by /app/flip/coins/ endpoint
 
 ### /app/flip/coin/ (GET)
 
