@@ -103,7 +103,7 @@ app.post('/app/flip/coins/', (req, res, next) => {
 app.post('/app/flip/call/', (req, res, next) => {
     const game = flipACoin(req.body.guess)
     res.status(200).json(game)
-})
+}) 
 
 // Default response for any other request
 app.use(function(req, res) {
