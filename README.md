@@ -90,7 +90,7 @@ curl http://localhost:5000/app/flip/
 #### Response body
 
 ```
-
+{"flip":"heads"}
 ```
 
 #### Response headers
