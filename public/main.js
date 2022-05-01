@@ -1,14 +1,13 @@
 const coin = document.getElementById("singleFlip")
 coin.addEventListener("click", flipCoin)
 async function flipCoin() {
-    const endpoint = "app/flip/"
-    const url = document.baseURI+endpoint
+    const url = 'http://localhost:5555/app/flip/'
     await fetch(url).then(function(response) {
     		    return response.json();
   		      }).then(function(result) {
-				    console.log(result);
+				    console.log(result.flip);
 				    document.getElementById("result").innerHTML = result.flip;
-				    document.getElementById("quarter").setAttribute("src", "assets/img/"+result.flip+".png");
+				    document.getElementById("quarter").setAttribute("src", "./assets/img/"+result.flip+".png");
 				  });
 };
 
@@ -69,45 +68,29 @@ async function sendFlips({ url, formData }) {
 
 // Navigation Buttons
 function homeNav() {
-    document.getElementById("homenav").className = "active";
-    document.getElementById("home").className = "active";
-    document.getElementById("singlenav").className = "";
-    document.getElementById("single").className = "inactive";
-    document.getElementById("multinav").className = "";
-    document.getElementById("multi").className = "inactive";
-    document.getElementById("guessnav").className = "";
-    document.getElementById("guesscoin").className = "inactive";
+    document.getElementById("home").className = "visable";
+    document.getElementById("single").className = "hidden";
+    document.getElementById("multi").className = "hidden";
+    document.getElementById("guess").className = "hidden";
 }
 
 function singleNav() {
-    document.getElementById("homenav").className = "";
-    document.getElementById("home").className = "inactive";
-    document.getElementById("singlenav").className = "active";
-    document.getElementById("single").className = "active";
-    document.getElementById("multinav").className = "";
-    document.getElementById("multi").className = "inactive";
-    document.getElementById("guessnav").className = "";
-    document.getElementById("guesscoin").className = "inactive";
+    document.getElementById("home").className = "hidden";
+    document.getElementById("single").className = "visable";
+    document.getElementById("multi").className = "hidden";
+    document.getElementById("guess").className = "hidden";
 }
 
 function multiNav() {
-    document.getElementById("homenav").className = "";
-    document.getElementById("home").className = "inactive";
-    document.getElementById("singlenav").className = "";
-    document.getElementById("single").className = "inactive";
-    document.getElementById("multinav").className = "active";
-    document.getElementById("multi").className = "active";
-    document.getElementById("guessnav").className = "";
-    document.getElementById("guesscoin").className = "inactive";
+    document.getElementById("home").className = "hidden";
+    document.getElementById("single").className = "hidden";
+    document.getElementById("multi").className = "visable";
+    document.getElementById("guess").className = "hidden";
 }
 
 function guessNav() {
-    document.getElementById("homenav").className = "";
-    document.getElementById("home").className = "inactive";
-    document.getElementById("singlenav").className = "";
-    document.getElementById("single").className = "inactive";
-    document.getElementById("multinav").className = "";
-    document.getElementById("multi").className = "inactive";
-    document.getElementById("guessnav").className = "active";
-    document.getElementById("guesscoin").className = "active";
+    document.getElementById("home").className = "hidden";
+    document.getElementById("single").className = "hidden";
+    document.getElementById("multi").className = "hidden";
+    document.getElementById("guess").className = "visable";
 } 
