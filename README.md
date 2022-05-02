@@ -196,25 +196,3 @@ Date: Mon, 02 May 2022 05:23:05 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 ```
-
-### /app/user/delete/ (DELETE)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
