@@ -197,28 +197,6 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 ```
 
-### /app/user/new/ (POST)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
 ### /app/user/update/ (PATCH)
 
 _Not yet implemented_
