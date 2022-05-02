@@ -197,27 +197,6 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 ```
 
-### /app/log/error/ (GET)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
 
 ### /app/user/login/ (POST)
 
