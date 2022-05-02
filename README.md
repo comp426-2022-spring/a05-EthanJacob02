@@ -181,7 +181,7 @@ curl http://localhost:5555/app/log/access
 #### Response body
 
 ```
-
+[{"id":1,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651010647229.0","method":"GET","url":"/app/log/access/","protocol":"http","httpversion":"1.1","secure":null,"status":"200.0","referer":null,"useragent":"curl/7.74.0"}]
 ```
 
 #### Response headers
