@@ -187,7 +187,14 @@ curl http://localhost:5555/app/log/access
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 18535
+ETag: W/"4867-7zou2CFUobG6B3CTwLQeimERf5k"
+Date: Mon, 02 May 2022 05:23:05 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/log/error/ (GET)
