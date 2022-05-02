@@ -57,7 +57,7 @@ node server.js [options]
 #### Request cURL
 
 ```
-curl http://localhost:5000/app/
+curl http://localhost:5555/app/
 ```
 
 #### Response body
@@ -84,7 +84,7 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-curl http://localhost:5000/app/flip/
+curl http://localhost:5555/app/flip/
 ```
 
 #### Response body
