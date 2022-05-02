@@ -190,26 +190,6 @@ curl http://localhost:5555/app/log/access
 
 ```
 
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
 ### /app/log/error/ (GET)
 
 _Not yet implemented_
