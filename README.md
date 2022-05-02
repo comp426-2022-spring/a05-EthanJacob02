@@ -108,27 +108,13 @@ Keep-Alive: timeout=5
 
 ### /app/flips/:number/ (GET)
 
-- Replaced by /app/flip/coins/ endpoint
+- Replaced by /app/flip/coins/ (POST) endpoint
 
 ### /app/flip/call/:guess/ (GET)
 
 #### Request cURL
 
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
+- Replaced by /app/flip/call (POST)
 
 ### /app/flip/call/ (POST)
 
