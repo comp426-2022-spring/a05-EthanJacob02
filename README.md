@@ -57,7 +57,7 @@ node server.js [options]
 #### Request cURL
 
 ```
-curl http://localhost:5000/app/
+curl http://localhost:5555/app/
 ```
 
 #### Response body
@@ -84,80 +84,37 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/flip/
 ```
 
 #### Response body
 
 ```
-
+{"flip":"heads"}
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 16
+ETag: W/"10-N9e0DDykqBPnqphc8f4bzHcjsuM"
+Date: Sun, 01 May 2022 00:12:57 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flips/:number/ (GET)
 
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/flip/coin/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
+- Replaced by /app/flip/coins/ (POST) endpoint
 
 ### /app/flip/call/:guess/ (GET)
 
 #### Request cURL
 
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
+- Replaced by /app/flip/call (POST)
 
 ### /app/flip/call/ (POST)
 
@@ -218,147 +175,24 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/log/access
 ```
 
 #### Response body
 
 ```
-
+[{"id":1,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651010647229.0","method":"GET","url":"/app/log/access/","protocol":"http","httpversion":"1.1","secure":null,"status":"200.0","referer":null,"useragent":"curl/7.74.0"}]
 ```
 
 #### Response headers
 
 ```
-
-```
-
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/log/error/ (GET)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/user/login/ (POST)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/user/new/ (POST)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/user/update/ (PATCH)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/user/delete/ (DELETE)
-
-_Not yet implemented_
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 18535
+ETag: W/"4867-7zou2CFUobG6B3CTwLQeimERf5k"
+Date: Mon, 02 May 2022 05:23:05 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```

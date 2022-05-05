@@ -27,22 +27,47 @@
   </head>
   <body>
     <nav>
-      <button id="homenav">Home</button>
-      <button id="singlenav">Flip one coin</button>
-      <button id="multinav">Flip multiple coins</button>
-      <button id="guessnav">Guess the result</button>
+      <button id="homenav" onclick="homeNav()" class="active">Home</button>
+      <button id="singlenav" onclick="singleNav()">Flip one coin</button>
+      <button id="multinav" onclick="multiNav()">Flip multiple coins</button>
+      <button id="guessnav" onclick="guessNav()">Guess the result</button>
     </nav>
     <div id="home">
-      
+      <h1>Coin Flipping Games!</h1>
+      <p>Click the buttons above to flip a coin, flip many coins, or guess a coin flip. 
     </div>    
     <div id="single" class="hidden">
-      
+      <h1>Flip a single coin.</h1>
+      <button id="singleFlip">Go!</button>
+      <h2 id="result">Result:</h2>
+      <img src="assets/img/coin.png" id="quarter" class="bigcoin">   
     </div>
     <div id="multi" class="hidden">
-      
+      <h1>Flip multiple coins!</h1>
+      <form id="coins">
+        <label for="number">
+          <strong>How many?</strong>
+        </label>
+        <input type="number" name="number" id="number">
+        <input type="submit" value="Flip!">
+      </form>
+      <h2>Results:</h2>
+      <p id="heads"></p>
+      <p id="tails"></p>
     </div>
     <div id="guess" class="hidden">
-      
+      <h1>Guess a coin flip:</h1>
+      <form id="call">
+        <select name="guess" id="guess" form="call">
+          <option value="heads">Heads</option>
+          <option value="tails">Tails</option>
+        </select>
+        <input type="submit" value="Flip!">
+      </form>
+      <h2>Results:</h2>
+      <p><span id="choice"><span></p>
+      <p><span id="actual"><span></p>
+      <p><span id="results"><span></p>
     </div>
 	<script src="main.js"></script>
   </body>
